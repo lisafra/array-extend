@@ -4,7 +4,6 @@
 git clone  https://github.com/lisafra/array-extend.git
 ### 第二步，引入文件
 <script src="array-extend.js"></script>  或者  import '/路径/array-extend.js'(es6语法需要编译)
-==
 
 ## API
 ### 求数组最小值
@@ -34,6 +33,6 @@ git clone  https://github.com/lisafra/array-extend.git
 ### 生成一组在指定区间范围且指定长度的随机不重复数据
 getRandomArr([min, max], len)
 
-=
+
 具体使用方法，请查看demo.html
 
