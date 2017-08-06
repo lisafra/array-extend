@@ -1,0 +1,24 @@
+{
+  "name": "array-extend",
+  "version": "1.0.0",
+  "description": "array extend",
+  "main": "array, extend method",
+  "scripts": {
+    "test": "A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisafra/array-extend.git"
+  },
+  "keywords": [
+    "array",
+    "extend",
+    "method"
+  ],
+  "author": "Yulia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisafra/array-extend/issues"
+  },
+  "homepage": "https://github.com/lisafra/array-extend#readme"
+}

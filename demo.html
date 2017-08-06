@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>数组扩展方法</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      color: #333;
+      font-size: 12px;
+    }
+    section {
+      width: 80%;
+      margin: 20px auto 0;
+    }
+    ul li{;
+      list-style: none;
+    }
+    .title{
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .item-list {
+      height: 40px;
+    }
+    input{
+      width: 2em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #ccc;
+      color: #555;
+      text-align: center;
+    }
+    button{
+      margin-top: 20px;
+      background: #efefef;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px 15px;
+      font-size: 12px;
+      cursor: pointer;
+      outline: none;
+    }
+    button:hover{
+      background: #3678cf;
+      color: #fff;
+      border: none;
+    }
+    .generate-random-arr{
+      width: 50%;
+      border: 1px solid #efefef;
+      padding: 20px;
+      line-height: 40px;
+    }
+
+  </style>
+</head>
+<body>
+ <section>
+   <h1 class="title">数组扩展方法</h1>
+   <ul class="content">
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]中的最大值是</span>:  <span id="max"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]中的最小值是</span>:  <span id="min"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]各元素之各是</span>:  <span id="sum"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]中的平均值是</span>:  <span id="avg"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]升序排列的结果是</span>:  <span id="ascend"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]降序排列的结果是</span>:  <span id="descend"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]中有数字35？ </span><span id="contains1"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]中有字符串'35'？ </span><span id="contains2"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]与数组[1, 9, 8, 35, 12]的元素完全相同？ </span><span id="isEqual1"></span>
+     </li>
+     <li class="item-list">
+       <span class="desc">数组[1, 9, 8, 35, 12]与数组[1, 9, 8]的元素完全相同？ </span><span id="isEqual2"></span>
+     </li>
+   </ul>
+   <div class="generate-random-arr">
+     <p>生成
+       <input type="text" id="rangeMin" value="0">
+       -
+       <input type="text" id="rangeMax" value="10">
+       之间，长度为
+       <input type="text" id="randomArrLen" value="5"/>
+       的随机数组
+     </p>
+     <p>result:  <span id="result"></span></p>
+     <button id="generateBtn">生成</button>
+   </div>
+ </section>
+
+ <script src="array-extend.js"></script>
+<script>
+  var sourceArr = [1, 9, 8, 35, 12];
+  var otherArr = [1, 9, 8];
+  window.onload = function () {
+     document.getElementById('max').innerText = sourceArr.max();
+     document.getElementById('min').innerText = sourceArr.min();
+     document.getElementById('sum').innerText = sourceArr.sum();
+     document.getElementById('avg').innerText = sourceArr.avg();
+     document.getElementById('ascend').innerText = sourceArr.ascend();
+     document.getElementById('descend').innerText = sourceArr.descend();
+     document.getElementById('contains1').innerText = sourceArr.contains(35);
+     document.getElementById('contains2').innerText = sourceArr.contains('35');
+     document.getElementById('isEqual1').innerText = sourceArr.isEqual(sourceArr);
+     document.getElementById('isEqual2').innerText = sourceArr.isEqual(otherArr);
+
+     document.getElementById('generateBtn').addEventListener('click', function () {
+       var min = document.getElementById('rangeMin').value;
+       var max = document.getElementById('rangeMax').value;
+       var len = document.getElementById('randomArrLen').value;
+       document.getElementById('result').innerText = getRandomArr([min, max], len);
+     })
+  }
+
+</script>
+</body>
+</html>
