@@ -1,7 +1,7 @@
 # array-extend
 ## 使用说明
 ### 第一步， 下载源码到本地
-#### git clone  https://github.com/lisafra/array-extend.git
+git clone  https://github.com/lisafra/array-extend.git
 ### 第二步，引入文件
 <script src="array-extend.js"></script>  或者  import '/路径/array-extend.js'(es6语法需要编译)
 ==
